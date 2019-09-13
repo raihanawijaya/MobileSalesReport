@@ -6,4 +6,8 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorPinkBackground">#FFC5C5</color>
     <color name="colorHeaderGrey">#ECECEC</color>
+    <color name="colorFont">#000000</color>
+    <color name="colorEditText">#FFEFEF</color>
+    <color name="colorButton">#CCB4B4</color>
 </resources>
+

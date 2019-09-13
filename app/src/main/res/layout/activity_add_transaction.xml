@@ -12,7 +12,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:layout_marginTop="0dp"
         android:background="@drawable/bg_header_add_transaction"
         android:orientation="vertical"
@@ -21,19 +21,182 @@
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="0dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MDS CITOS 471"
+            android:textSize="18sp"
+            android:textColor="@color/colorFont"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="18dp"
+            />
+
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="22dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/bg_add_transaction"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DATE"
+                android:textSize="18sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="sans-serif-black"
+
+                />
+            <EditText
+                android:layout_width="210dp"
+                android:layout_height="30dp"
+                android:background="@color/colorEditText"
+                android:layout_marginLeft="55dp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UNIQUE ID"
+                android:textSize="18sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="sans-serif-black"
+
+                />
+            <EditText
+                android:layout_width="210dp"
+                android:layout_height="30dp"
+                android:background="@color/colorEditText"
+                android:layout_marginLeft="15dp"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRICE"
+                android:textSize="18sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="sans-serif-black"
+
+                />
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@color/colorEditText"
+                android:layout_marginLeft="50dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QTY"
+                android:textSize="18sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginLeft="10dp"
+                />
+
+            <EditText
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:background="@color/colorEditText"
+                android:layout_marginLeft="10dp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DISC"
+                android:textSize="18sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="sans-serif-black"
+
+                />
+            <EditText
+                android:layout_width="65dp"
+                android:layout_height="30dp"
+                android:background="@color/colorEditText"
+                android:layout_marginLeft="61dp"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="200dp"
+                android:background="@drawable/bg_button_add_transaction"
+                android:text="OK"
+                android:textStyle="normal"
+                android:textFontWeight="nomrmal"
+                android:textSize="20dp"
+                android:lineHeight="21dp"
+
+                >
+
+            </Button>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
