@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainAfterActivity"></activity>
+        <activity android:name=".MainAfterEditActivity"></activity>
+        <activity android:name=".MainBeforeActivity" />
+        <activity android:name=".MainAfterActivity" />
         <activity android:name=".EditTransactionActivity" />
         <activity android:name=".AddTransactionActivity" />
         <activity android:name=".LoginActivity">

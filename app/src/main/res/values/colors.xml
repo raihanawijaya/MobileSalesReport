@@ -9,5 +9,6 @@
     <color name="colorFont">#000000</color>
     <color name="colorEditText">#FFEFEF</color>
     <color name="colorButton">#CCB4B4</color>
+    <color name="colorBgLogin">#F4F4F4</color>
 </resources>
 

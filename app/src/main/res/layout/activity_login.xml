@@ -4,82 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="PALOMINO"
+        android:layout_height="60dp"
+        android:layout_marginTop="67dp"
+        android:orientation="vertical"
         android:textAlignment="center"
-        android:textSize="36sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:text="PALOMINO"
+            android:textSize="36sp"
+            android:textColor="@color/colorFont"
+            android:fontFamily="@font/Roboto-Regular"
+            android:textAlignment="center"
+            android:layout_marginLeft="114dp"
+            android:layout_marginTop="18dp"
+            android:textStyle="bold"
+            android:lineHeight="42dp"
+            android:textFontWeight="900"
+            />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="8dp"
-        android:background="#F4F4F4"
+        android:layout_height="220dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginRight="41dp"
+        android:background="@drawable/bg_login_activity"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.232"
-        tools:layout_editor_absoluteX="39dp">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="-16dp">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_margin="8dp">
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/Roboto-Regular"
+                android:lineHeight="16dp"
                 android:text="USERCODE"
+                android:textColor="@color/colorFont"
+                android:textFontWeight="900"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
                 />
 
             <EditText
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"/>
+                android:layout_width="206dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/colorWhite"
+                android:fontFamily="@font/Roboto-Regular"
+                android:lineHeight="17dp"
+                android:textFontWeight="900"
+                android:textStyle="bold" />
+
 
         </LinearLayout>
-
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="30dp">
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="USERPASS" />
+                android:fontFamily="@font/Roboto-Regular"
+                android:lineHeight="16dp"
+                android:text="USERPASS"
+                android:textColor="@color/colorFont"
+                android:textFontWeight="900"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                />
 
             <EditText
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"/>
+                android:layout_width="206dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/colorWhite"
+                android:fontFamily="@font/Roboto-Regular"
+                android:lineHeight="17dp"
+                android:textFontWeight="900"
+                android:textStyle="bold" />
+
 
         </LinearLayout>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_margin="8dp"
-            android:background="#FFC5C5"
-            android:text="LOGIN"/>
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="23dp"
+            android:background="@color/colorPinkBackground"
+            android:layout_marginTop="15dp"
+            android:text="LOGIN"
+            android:textColor="@color/colorWhite"
+            android:textSize="19sp"
+            android:fontFamily="@font/Roboto-Regular"
+            android:textStyle="bold"
+            android:lineHeight="21sp"
+            android:textFontWeight="900"
 
 
+            >
+
+        </Button>
     </LinearLayout>
-
 
 </android.support.constraint.ConstraintLayout>
