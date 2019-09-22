@@ -116,7 +116,7 @@
                 android:lineHeight="21dp"
                 android:textFontWeight="900"
                 android:textStyle="normal"
-                android:text="3"
+                android:text="4"
                 android:textAlignment="center"
                 />
 
@@ -153,7 +153,7 @@
                 android:lineHeight="21dp"
                 android:textFontWeight="900"
                 android:textStyle="normal"
-                android:text="0"
+                android:text="1"
                 android:textAlignment="center"
                 />
 
@@ -189,7 +189,7 @@
                 android:lineHeight="21dp"
                 android:textFontWeight="900"
                 android:textStyle="normal"
-                android:text="1.340.000"
+                android:text="1.489.000"
                 android:textAlignment="center"
                 />
 
@@ -217,15 +217,15 @@
                 />
 
             <EditText
-                android:layout_width="50dp"
+                android:layout_width="90dp"
                 android:layout_height="34dp"
-                android:layout_marginLeft="123dp"
+                android:layout_marginLeft="90dp"
                 android:background="@color/colorEditText"
                 android:fontFamily="@font/Roboto-Regular"
                 android:lineHeight="21dp"
                 android:textFontWeight="900"
                 android:textStyle="normal"
-                android:text="0"
+                android:text="149.500"
                 android:textAlignment="center"
                 />
 
@@ -234,5 +234,374 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="310dp"
+        android:background="@color/colorBgTable"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                >
+                <TextView
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ITEM"
+                    android:layout_marginTop="15dp"
+                    >
+
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QTY"
+                    android:layout_marginTop="15dp"
+                    >
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DISC"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRICE"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+            </TableRow>
+
+
+            <TableRow
+                >
+                <TextView
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ITEM"
+                    android:layout_marginTop="15dp"
+                    >
+
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QTY"
+                    android:layout_marginTop="15dp"
+                    >
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DISC"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRICE"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="360dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                >
+                <TextView
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AAA4"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    >
+
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    >
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    >
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="299000"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    >
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="149000"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    >
+                </TextView>
+
+            </TableRow>
+
+
+            <TableRow
+                >
+                <TextView
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ITEM"
+                    android:layout_marginTop="15dp"
+                    >
+
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QTY"
+                    android:layout_marginTop="15dp"
+                    >
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DISC"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PRICE"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+                <TextView
+
+                    android:fontFamily="@font/Roboto-Regular"
+                    android:textStyle="bold"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:lineHeight="160dp"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/colorFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL"
+                    android:layout_marginTop="15dp">
+                </TextView>
+
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>

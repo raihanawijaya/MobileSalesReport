@@ -10,5 +10,6 @@
     <color name="colorEditText">#FFEFEF</color>
     <color name="colorButton">#CCB4B4</color>
     <color name="colorBgLogin">#F4F4F4</color>
+    <color name="colorBgTable">#FFE5E5</color>
 </resources>
 
