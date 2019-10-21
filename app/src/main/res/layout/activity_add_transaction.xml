@@ -25,17 +25,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MDS CITOS 471"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textColor="@color/colorFont"
             android:fontFamily="@font/roboto_regular"
             android:layout_marginLeft="150dp"
             android:layout_marginTop="18dp"
             android:textStyle="normal"
             android:lineHeight="16dp"
-            android:textFontWeight="500"
-            />
-
-
+            android:textFontWeight="500" />
     </LinearLayout>
 
     <LinearLayout
@@ -53,15 +50,16 @@
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="20dp"
             android:layout_marginRight="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DATE"
-                android:textSize="18sp"
+                android:text="CODE"
+                android:textSize="14sp"
                 android:textColor="@color/colorFont"
                 android:fontFamily="@font/roboto_regular"
                 android:textStyle="bold"
@@ -70,6 +68,41 @@
 
                 />
             <EditText
+                android:id="@+id/et_trx_code"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:background="@color/colorEditText"
+                android:layout_marginLeft="55dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="bold"
+                android:lineHeight="17dp"
+                android:textFontWeight="900"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DATE"
+                android:textSize="14sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="bold"
+                android:lineHeight="17dp"
+                android:textFontWeight="900"
+
+                />
+            <EditText
+                android:id="@+id/et_trx_date"
                 android:layout_width="210dp"
                 android:layout_height="30dp"
                 android:background="@color/colorEditText"
@@ -95,7 +128,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="UNIQUE ID"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textColor="@color/colorFont"
                 android:fontFamily="@font/roboto_regular"
                 android:textStyle="bold"
@@ -104,10 +137,11 @@
 
                 />
             <EditText
-                android:layout_width="210dp"
+                android:id="@+id/et_article"
+                android:layout_width="200dp"
                 android:layout_height="30dp"
                 android:background="@color/colorEditText"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/roboto_regular"
                 android:textStyle="bold"
                 android:lineHeight="17dp"
@@ -130,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PRICE"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textColor="@color/colorFont"
                 android:fontFamily="@font/roboto_regular"
                 android:textStyle="bold"
@@ -139,6 +173,7 @@
 
                 />
             <EditText
+                android:id="@+id/et_price"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:background="@color/colorEditText"
@@ -153,7 +188,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="QTY"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textColor="@color/colorFont"
                 android:layout_marginLeft="10dp"
                 android:fontFamily="@font/roboto_regular"
@@ -163,6 +198,7 @@
                 />
 
             <EditText
+                android:id="@+id/et_qty"
                 android:layout_width="55dp"
                 android:layout_height="30dp"
                 android:background="@color/colorEditText"
@@ -176,38 +212,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="24dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DISC"
-                android:textSize="18sp"
-                android:textColor="@color/colorFont"
-                android:fontFamily="@font/roboto_regular"
-                android:textStyle="bold"
-                android:lineHeight="17dp"
-                android:textFontWeight="900"
-                />
-            <EditText
-                android:layout_width="65dp"
-                android:layout_height="30dp"
-                android:background="@color/colorEditText"
-                android:layout_marginLeft="61dp"
-                android:fontFamily="@font/roboto_regular"
-                android:textStyle="bold"
-                android:lineHeight="17dp"
-                android:textFontWeight="900"
-                />
-
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -218,19 +222,15 @@
             android:orientation="horizontal">
 
             <Button
-                android:layout_width="120dp"
+                android:id="@+id/btn_input"
+                android:layout_width="80dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="200dp"
+                android:layout_marginLeft="170dp"
                 android:background="@drawable/bg_button_add_transaction"
                 android:text="OK"
-                android:textSize="20dp"
+                android:textSize="14dp"
                 android:fontFamily="@font/roboto_regular"
-                android:textStyle="bold"
-                android:lineHeight="17dp"
-                android:textFontWeight="900"
-
-                >
-
+                android:textStyle="bold">
             </Button>
 
 

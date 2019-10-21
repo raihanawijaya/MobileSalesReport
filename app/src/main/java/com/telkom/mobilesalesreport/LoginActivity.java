@@ -24,9 +24,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //inisiasi
         btnLogin = findViewById(R.id.btn_login);
-        etUserCode = findViewById(R.id.et_usercode);
         etUserPass = findViewById(R.id.et_userpass);
+        etUserCode = findViewById(R.id.et_usercode);
         connectionClass = new ConnectionClass();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -48,17 +49,6 @@ public class LoginActivity extends AppCompatActivity {
         protected void onPreExecute() {
 
         }
-
-        @Override
-        protected void onPostExecute(String r) {
-            if (isSuccess) {
-                Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_LONG).show();
-                Intent gotomain = new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(gotomain);
-            }
-        }
-
-
         //DO IN BACKGROUOND, MAKE QUERY, CALL CONNECTION CLASS, RETURN VALUE OF Z AND ISSUCCESS
         @Override
         protected String doInBackground(String... params) {
@@ -88,5 +78,17 @@ public class LoginActivity extends AppCompatActivity {
             }
             return z;
         }
+
+        @Override
+        protected void onPostExecute(String r) {
+            if (isSuccess) {
+                Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_LONG).show();
+                Intent gotomain = new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(gotomain);
+
+            }
+        }
+
     }
+
 }
