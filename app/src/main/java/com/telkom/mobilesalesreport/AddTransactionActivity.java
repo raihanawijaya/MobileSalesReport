@@ -66,31 +66,29 @@ public class AddTransactionActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
             try {
-                Connection conn = connectionClass.CONN();
-                if (conn == null) {
-                    success = false;
-                } else {
+                Connection conn = connectionClass.CONN(); //----1
+                if (conn == null) { //----2
+                    success = false;//----3
+                } else { //----4
+                    //----5
                     String query = "EXEC DB_A4A292_msr.dbo.SP_INSERT_TRANSACTION '" + trxCode + "','" + storecode + "','" + trxDate + "','" + article + "','" + price + "','" + qty +"'";
                     Log.d("QUERY", query);
                     Statement stmt = conn.createStatement();
                     int status = stmt.executeUpdate(query);
-                    if (status != 0) {
-                        msg = "Input Success";
+                    if (status != 0) { //----6
+                        msg = "Input Success"; //----7
                         success = true;
-                    } else {
-                        msg = "Input Failed";
+                    } else { //----8
+                        msg = "Input Failed"; //----9
                         success = false;
                     }
                 }
-            } catch (Exception e) {
+            } catch (Exception e) { //10
                 e.printStackTrace();
                 Writer writer = new StringWriter();
                 e.printStackTrace(new PrintWriter(writer));
-                msg = "Gagal : Check Uniqueid & Disc !" ;//writer.toString();
-                success = false;
-
             }
-            return msg;
+            return msg; //----11
         }
 
         @Override

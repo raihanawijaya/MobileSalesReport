@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="0.5dp"
+    android:paddingBottom="1dp"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/lay_item_data"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgTable">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="8dp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_trx_date"
+                android:textColor="@color/font_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2019-06-01"/>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginRight="8dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_article"
+                android:textColor="@color/font_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:text="41,673,550"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginRight="8dp"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_qty"
+                android:textColor="@color/font_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:text="71"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginRight="8dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:textColor="@color/font_item"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:text="20,605,298"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

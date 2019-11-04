@@ -11,5 +11,7 @@
     <color name="colorButton">#CCB4B4</color>
     <color name="colorBgLogin">#F4F4F4</color>
     <color name="colorBgTable">#FFE5E5</color>
+    //used
+    <color name="font_item">#000000</color>
 </resources>
 
