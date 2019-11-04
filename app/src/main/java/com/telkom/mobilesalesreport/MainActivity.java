@@ -1,16 +1,22 @@
 package com.telkom.mobilesalesreport;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -18,7 +24,9 @@ import java.io.Writer;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import static java.security.AccessController.getContext;
@@ -29,10 +37,17 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     private boolean success = false;
     //untuk get data
     private RecyclerView myRecyclerView;
+    private DateUtils dateUtils;
+    private TextView tvHeaderDate;
+    private int y_code,m_code;
     private List<DataClass> listData = new ArrayList<>();
     private ConnectionClass connectionClass;
     private DataAdapter MyAdapter;
     private SwipeRefreshLayout swipeRefreshLayout;
+    private String date_out;
+    public String getDate_out() {
+        return date_out;
+    }
 
 
     @Override
@@ -42,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         connectionClass = new ConnectionClass();
         myRecyclerView = findViewById(R.id.rv_main);
         MyAdapter = new DataAdapter(listData);
+        tvHeaderDate = findViewById(R.id.tv_header_date);
+        dateUtils = new DateUtils();
         myRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         myRecyclerView.setAdapter(MyAdapter);
         swipeRefreshLayout = findViewById(R.id.swipe);
@@ -56,8 +73,46 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             }
         });
 
+        //init Data
+        //tvStoreCode.setText(sharedPreference.getObjectData("username", String.class));
+
+        String today = dateUtils.formatCurrentDate(DateUtils.SDF_FORMAT2);
+        int firstDay = dateUtils.getCurrentDays();
+        String firstDayString = firstDay + "/" + (dateUtils.getCurrentMonth() + 1) + "/" + dateUtils.getCurrentYear();
+        try {
+            tvHeaderDate.setText(dateUtils.reFormatDate(firstDayString, DateUtils.SDF_FORMAT1, DateUtils.SDF_FORMAT2));
+             } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        date_out = tvHeaderDate.getText().toString();
+
+        //sharedPreference.storeData("today", today);
+
+        //init data end
+
+        tvHeaderDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatePickerDialog dialog = new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+                        String string_date = dayOfMonth + "/" + (month + 1) + "/" + year;
+                        try {
+                            date_out = dateUtils.reFormatDate(string_date, DateUtils.SDF_FORMAT1, DateUtils.SDF_FORMAT2);
+                            tvHeaderDate.setText(date_out);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, dateUtils.getCurrentYear(), dateUtils.getCurrentMonth(), dateUtils.getCurrentDays());
+                dialog.show();
+            }
+        });
+
 
     }
+
+
 
     private class SyncData extends AsyncTask<String, String, String> {
         String msg = "Internet/DB_Credentials/Windows_FireWall_TurnOn Error, See Android Monitor in the bottom For details";
