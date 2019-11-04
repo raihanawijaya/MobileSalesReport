@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/view_data"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halo, Raihana"
+                android:textSize="20sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:lineHeight="21sp"
+                android:textFontWeight="500"/>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/back"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="15dp">
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_below="@+id/linearLayout"
+            android:background="@drawable/bg_main_activity"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="-16dp">
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:lineHeight="16dp"
+                android:text="21 Oct 2019"
+                android:textColor="@color/colorFont"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="21dp"
+                    android:text="MONTHLY SALES"
+                    android:textColor="@color/colorFont"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:textStyle="normal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="21dp"
+                    android:text="TODAY SALES"
+                    android:textColor="@color/colorFont"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="21dp"
+                    android:text="MONTHLY INCOME"
+                    android:textColor="@color/colorFont"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:textStyle="normal"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="21dp"
+                    android:text="TODAY INCOME"
+                    android:textColor="@color/colorFont"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:textStyle="normal"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/title_data"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorBgLogin"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_marginBottom="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/items_a">
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBgTable"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lay1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="8dp"
+                android:src="@drawable/previous"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_add_transaction"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="8dp"
+                android:src="@drawable/tambah"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="8dp"
+                android:src="@drawable/next"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
