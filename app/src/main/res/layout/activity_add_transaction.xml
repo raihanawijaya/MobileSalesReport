@@ -19,20 +19,41 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MDS CITOS 471"
-            android:textSize="14sp"
-            android:textColor="@color/colorFont"
-            android:fontFamily="@font/roboto_regular"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="18dp"
-            android:textStyle="normal"
-            android:lineHeight="16dp"
-            android:textFontWeight="500" />
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store "
+                android:textSize="14sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="18dp"
+                android:textStyle="normal"
+                android:lineHeight="16dp"
+                android:textFontWeight="500" />
+
+            <TextView
+                android:id="@+id/tv_storecode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="18dp"
+                android:textStyle="normal"
+                android:lineHeight="16dp"
+                android:textFontWeight="500" />
+
+            />
+
     </LinearLayout>
 
     <LinearLayout
@@ -111,6 +132,7 @@
                 android:textStyle="bold"
                 android:lineHeight="17dp"
                 android:textFontWeight="900"
+                android:focusable="false"
                 />
 
 

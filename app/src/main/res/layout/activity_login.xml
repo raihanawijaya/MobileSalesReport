@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="39dp"
-            android:text="PALOMINO"
+            android:text="MSR"
             android:textSize="36sp"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/colorFont"
@@ -72,6 +72,7 @@
 
             <EditText
                 android:id="@+id/et_usercode"
+                android:textColorLink="@color/mdtp_button_color"
                 android:layout_width="206dp"
                 android:layout_height="34dp"
                 android:layout_marginLeft="10dp"

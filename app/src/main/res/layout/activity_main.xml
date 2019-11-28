@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Halo, Raihana"
+                android:text="Store  "
                 android:textSize="20sp"
                 android:textColor="@color/colorFont"
                 android:fontFamily="@font/roboto_regular"
@@ -34,11 +34,25 @@
                 android:lineHeight="21sp"
                 android:textFontWeight="500"/>
 
+            <TextView
+                android:id="@+id/tv_storecode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textColor="@color/colorFont"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:lineHeight="21sp"
+                android:textFontWeight="500"/>
+
             <ImageView
+                android:id="@+id/iv_home"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:src="@drawable/back"
-                android:layout_marginLeft="180dp"
+                android:layout_marginLeft="200dp"
                 android:layout_marginTop="15dp">
             </ImageView>
         </LinearLayout>
@@ -70,7 +84,7 @@
                 android:textAlignment="center"
 
                 />
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="24dp"
@@ -88,9 +102,24 @@
                     android:textFontWeight="900"
                     android:textSize="16sp"
                     android:textStyle="normal"/>
-            </LinearLayout>
 
-            <LinearLayout
+                <TextView
+                    android:id="@+id/tv_mtd_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="21dp"
+                    android:text="Refresh"
+                    android:textColor="@color/colorFont"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="24dp"
@@ -110,9 +139,22 @@
                     android:textStyle="normal"
                     />
 
+                <TextView
+                    android:id="@+id/tv_today_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="21dp"
+                    android:text="Refresh"
+                    android:textColor="@color/colorFont"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:textStyle="normal"/>
 
-            </LinearLayout>
-            <LinearLayout
+
+            </RelativeLayout>
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="24dp"
@@ -131,9 +173,24 @@
                     android:textSize="16sp"
                     android:textStyle="normal"/>
 
+                <TextView
+                    android:id="@+id/tv_mtd_nett"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="21dp"
+                    android:text="Refresh"
+                    android:textColor="@color/colorFont"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
 
-            </LinearLayout>
-            <LinearLayout
+
+            </RelativeLayout>
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginLeft="24dp"
@@ -151,15 +208,102 @@
                     android:textFontWeight="900"
                     android:textSize="16sp"
                     android:textStyle="normal"/>
-            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_today_nett"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:lineHeight="21dp"
+                    android:text="Refresh"
+                    android:textColor="@color/colorFont"
+                    android:textFontWeight="900"
+                    android:textSize="16sp"
+                    android:textStyle="normal"/>
+            </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/title_data"
+            android:id="@+id/lay_item_data"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:background="@color/colorBgLogin"
-            android:orientation="horizontal">
+            android:gravity="center_vertical"
+            android:background="@color/colorBgLogin">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_trx_date"
+                    android:textColor="@color/font_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date"/>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginRight="8dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_article"
+                    android:textColor="@color/font_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:text="Article"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginRight="8dp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_qty"
+                    android:textColor="@color/font_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:text="Qty"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginRight="8dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:textColor="@color/font_item"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd"
+                    android:text="Price"/>
+
+
+            </LinearLayout>
+
+
         </LinearLayout>
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -192,11 +336,11 @@
         android:layout_height="fill_parent"
         android:layout_weight="1">
 
-        <ImageView
+       <!-- <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:padding="8dp"
-            android:src="@drawable/previous"/>
+            android:src="@drawable/previous"/>-->
     </LinearLayout>
 
     <LinearLayout
@@ -218,11 +362,12 @@
         android:layout_height="fill_parent"
         android:layout_weight="1">
 
-        <ImageView
+       <!-- <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:padding="8dp"
-            android:src="@drawable/next"/>
+            android:src="@drawable/next"
+            />-->
 
     </LinearLayout>
     </LinearLayout>

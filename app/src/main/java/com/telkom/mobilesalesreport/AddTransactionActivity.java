@@ -9,6 +9,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.PrintWriter;
@@ -20,9 +21,12 @@ import java.sql.Statement;
 public class AddTransactionActivity extends AppCompatActivity {
 
     private EditText etTrxCode, etTrxDate, etArticle, etPrice, etQty;
+    private TextView tvStoreCode;
     private Button btnInput;
     private ConnectionClass connectionClass;
+    private SharedPreference sharedPreference;
     private boolean success = false;
+    private String getDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +37,14 @@ public class AddTransactionActivity extends AppCompatActivity {
         etArticle = findViewById(R.id.et_article);
         etPrice = findViewById(R.id.et_price);
         etQty = findViewById(R.id.et_qty);
+        tvStoreCode = findViewById(R.id.tv_storecode);
         btnInput = findViewById(R.id.btn_input);
         connectionClass = new ConnectionClass();
-
+        sharedPreference = new SharedPreference(this);
+        getDate = sharedPreference.getObjectData("date", String.class);
+        String storecode = sharedPreference.getObjectData("store", String.class);
+        tvStoreCode.setText(storecode);
+        etTrxDate.setText(getDate);
         btnInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +63,7 @@ public class AddTransactionActivity extends AppCompatActivity {
         String article = etArticle.getText().toString();
         String price = etPrice.getText().toString();
         String qty = etQty.getText().toString();
-        String storecode= "001";
+        String storecode = sharedPreference.getObjectData("store", String.class);
 
 
         @Override

@@ -1,16 +1,30 @@
 package com.telkom.mobilesalesreport;
 
 public class DataClass {
-    private String trxDate, article, qty, price;
+    private String trxCode,trxDate, article, qty, price, rowid;
 
     public DataClass() {
     }
 
-    public DataClass(String trxDate, String article, String qty, String price) {
+    public DataClass(String trxCode, String trxDate, String article, String qty, String price, String rowid) {
+        this.trxCode = trxCode;
         this.trxDate = trxDate;
         this.article = article;
         this.qty = qty;
         this.price = price;
+        this.rowid = rowid;
+    }
+
+    public String getRowid() {
+        return rowid;
+    }
+
+    public String getTrxCode() {
+        return trxCode;
+    }
+
+    public void setTrxCode(String trxCode) {
+        this.trxCode = trxCode;
     }
 
     public String getTrxDate() {

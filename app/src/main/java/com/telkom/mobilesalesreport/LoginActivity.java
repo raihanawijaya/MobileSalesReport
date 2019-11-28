@@ -15,6 +15,7 @@ import java.sql.Statement;
 
 public class LoginActivity extends AppCompatActivity {
 
+    private SharedPreference sharedPreference;
     private Button btnLogin;
     private EditText etUserCode, etUserPass;
     private ConnectionClass connectionClass;
@@ -24,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        sharedPreference = new SharedPreference(this);
         //inisiasi
         btnLogin = findViewById(R.id.btn_login);
         etUserPass = findViewById(R.id.et_userpass);
@@ -82,6 +84,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String r) {
             if (isSuccess) {
+                sharedPreference.storeData("store", usercode);
                 Toast.makeText(LoginActivity.this, "Login Successfull", Toast.LENGTH_LONG).show();
                 Intent gotomain = new Intent(LoginActivity.this,MainActivity.class);
                 startActivity(gotomain);

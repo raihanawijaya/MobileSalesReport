@@ -2,6 +2,7 @@ package com.telkom.mobilesalesreport;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> {
@@ -19,12 +21,11 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
     List<DataClass> listData;
 
     public DataAdapter(List<DataClass> listData) {
-        //this.mcontext = mcontext;
         this.listData = listData;
     }
 
     public void setmData(List<DataClass> mData) {
-        this.listData = listData;
+        this.listData = mData;
     }
 
 
@@ -35,6 +36,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
         v = LayoutInflater.from(mcontext).inflate(R.layout.items_a,viewGroup,false);
         MyViewHolder vHolder = new MyViewHolder(v);
         return vHolder;*/
+        mcontext = viewGroup.getContext();
         View itemView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.items_a, viewGroup, false);
 
@@ -44,11 +46,23 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int i) {
         final DataClass dataClass = listData.get(i);
-        int Flag;
         viewHolder.tv_trxDate.setText(listData.get(i).getTrxDate());
         viewHolder.tv_article.setText(listData.get(i).getArticle());
         viewHolder.tv_qty.setText(listData.get(i).getQty());
         viewHolder.tv_price.setText(listData.get(i).getPrice());
+        viewHolder.lay_item_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent go_to_b_detail = new Intent(mcontext, EditTransactionActivity.class);
+                go_to_b_detail.putExtra("itemTrxCode",dataClass.getTrxCode());
+                go_to_b_detail.putExtra("itemDate",dataClass.getTrxDate());
+                go_to_b_detail.putExtra("itemArticle",dataClass.getArticle());
+                go_to_b_detail.putExtra("itemPrice",dataClass.getPrice());
+                go_to_b_detail.putExtra("itemQty",dataClass.getQty());
+                go_to_b_detail.putExtra("itemRowId",dataClass.getRowid());
+                mcontext.startActivity(go_to_b_detail);
+            }
+        });
     }
 
     @Override
